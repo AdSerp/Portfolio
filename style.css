@@ -1,0 +1,151 @@
+
+:root{
+  --backgroundColor: rgba(0, 0, 0, 1);
+  --textColor: rgba(255, 255, 255, 1);
+}
+@font-face{
+ font-family: 'QuickSand';
+ src: url(/Quicksand/Quicksand-VariableFont_wght.ttf);
+ font-weight:400;
+ font-style: normal;
+}
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: rgb(0, 0, 0);
+  font-family: 'Quicksand';
+  font-weight: 400;
+  height: 100vh;
+  width: 100vw;
+  color: #C8C8C8
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    align-content: center   ;
+    
+}
+
+nav > img {
+  max-width: 30px;
+}
+
+nav > ul {
+  border-radius: 30px;
+  border: solid 10px rgb(22, 22, 22);
+  display: flex;
+  margin: 20px;
+ }
+
+nav > ul > li {
+  margin: 20px;
+  list-style: none; 
+}
+
+nav > ul >  li > a {
+  color: #C8C8C8;
+  text-decoration: none;
+}
+nav > ul >  li:hover {
+  text-decoration:overline ;
+  
+  
+}
+section {
+  height: 100vh;
+  background-color: rgb(67, 1, 73);
+  margin-bottom: 200px;
+}
+
+a {
+  text-decoration: none;
+}
+ /* Mi nombre, descripción y animaciones*/
+h1,
+h3{
+  position:sticky;
+  left: 30px;
+  width: 30%;
+  font-size: 50px;
+  background: conic-gradient(rgba(212, 11, 51, 0.973), coral, darksalmon);
+  color: transparent;
+  background-clip: text;
+  background-size: 2000px 2000px;
+  animation: rgb 10s infinite linear;
+}
+
+@keyframes rgb{
+  0%{
+    background-position: 0 0;
+  }
+  25%{
+    background-position: 0 100%;
+  }
+  50%{
+    
+   background-position: 100% 100%;
+}
+75% {
+  background-position: 100% 0;
+
+}
+0% {
+background-position: 0 0;
+}
+}
+
+.text-animation{
+  font-size: 26px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid transparent;
+  animation: typing 3.6s steps(14) infinite, blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  } to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  } 50% {
+    border-color: white;
+  }
+}
+
+.about{
+display: flex;  
+flex-direction: column;
+}
+
+.social,
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social > a {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+}
+
+.container {
+ border: solid 5px black;
+ border-style:dashed;
+}
+
