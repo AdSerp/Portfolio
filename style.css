@@ -15,7 +15,8 @@
 }
 
 body,
-html {
+html,
+main {
   background-color: rgb(0, 0, 0);
   font-family: 'Quicksand';
   font-weight: 400;
@@ -68,7 +69,7 @@ section {
 a {
   text-decoration: none;
 }
- /* Mi nombre, descripción y animaciones*/
+ /* Mi nombre, descripción*/
 h1,
 h3{
   position:sticky;
@@ -82,6 +83,125 @@ h3{
   animation: rgb 10s infinite linear;
 }
 
+
+
+.text-animation{
+  font-size: 26px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid transparent;
+  animation: typing 3.6s steps(14) infinite, blink-caret .5s step-end infinite;
+}
+
+
+.about{
+display: flex;  
+flex-direction: column;
+}
+
+.social{
+ display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   
+}
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social > a {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  justify-content: center;
+  height: 4em;
+  width: 10em;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50%;
+  z-index: 1;
+}
+  
+
+.social > a:hover {
+animation: animation 8s linear infinite;
+border: none;
+cursor: pointer;
+}
+.social > a:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f44185, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+}
+.social > a:hover::before{
+  filter: blur(20px);
+}
+
+
+.container {
+ border: solid 5px black;
+ border-style:dashed;
+}
+
+.projects {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.card{
+  position: relative;
+  display: flex;
+  left: 0px;
+  border-radius: 4px;
+  padding: 8px;
+  height: 30vh;
+  transition: 0.4s ease-in-out;
+  flex: 1px;
+  background-image: linear-gradient(to right,#A74CF2,#3963D7);
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover{
+  flex:3;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* KEY FRAMES*/
+@keyframes typing {
+  from {
+    width: 0;
+  } to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  } 50% {
+    border-color: white;
+  }
+}
+
+@keyframes animation {
+  0%{ background-position: 0%;}
+  100% {background-position: 400%;}
+}
 @keyframes rgb{
   0%{
     background-position: 0 0;
@@ -101,51 +221,3 @@ h3{
 background-position: 0 0;
 }
 }
-
-.text-animation{
-  font-size: 26px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid transparent;
-  animation: typing 3.6s steps(14) infinite, blink-caret .5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  } to {
-    width: 100%;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  } 50% {
-    border-color: white;
-  }
-}
-
-.about{
-display: flex;  
-flex-direction: column;
-}
-
-.social,
-.skills {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.social > a {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 20px;
-}
-
-.container {
- border: solid 5px black;
- border-style:dashed;
-}
-
